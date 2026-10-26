@@ -1,0 +1,128 @@
+{
+  "at": "2026-10-07T21:12:54.713Z",
+  "probeResults": [
+    {
+      "method": "GET",
+      "path": "/v1/GetInsuranceClaims",
+      "status": 429,
+      "body": {
+        "PatientId": "17271",
+        "FromDate": "2020-01-01",
+        "ToDate": "2026-12-31",
+        "Skip": 0,
+        "Take": 1000
+      },
+      "preview": "{\"Message\":\"This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact sup"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetClaims",
+      "status": 404,
+      "body": {
+        "PatientId": "17271",
+        "FromDate": "2020-01-01",
+        "ToDate": "2026-12-31",
+        "Skip": 0,
+        "Take": 1000
+      },
+      "preview": "null"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetInsurance",
+      "status": 429,
+      "body": {
+        "PatientId": "17271",
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "{\"Message\":\"This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact sup"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetProviders",
+      "status": 400,
+      "body": {
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "{\"Message\":\"Invalid API Authentication\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetProvider",
+      "status": 429,
+      "body": {
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "{\"Message\":\"This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact sup"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetPractice",
+      "status": 404,
+      "body": {
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "null"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetPractices",
+      "status": 429,
+      "body": {
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "{\"Message\":\"This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact sup"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetAccountReceivable",
+      "status": 404,
+      "body": {
+        "PatientId": "17271",
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "null"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetAR",
+      "status": 404,
+      "body": {
+        "PatientId": "17271",
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "null"
+    },
+    {
+      "method": "POST",
+      "path": "/v1/live/GetAppointments",
+      "status": 429,
+      "body": {
+        "PatientId": "17303",
+        "FromDate": "2020-01-01",
+        "ToDate": "2026-12-31",
+        "Skip": 0,
+        "Take": 1000
+      },
+      "preview": "{\"Message\":\"This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact sup"
+    },
+    {
+      "method": "GET",
+      "path": "/v1/GetDocuments",
+      "status": 429,
+      "body": {
+        "PatientId": "17271",
+        "Skip": 0,
+        "Take": 100
+      },
+      "preview": "{\"Message\":\"This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact sup"
+    }
+  ]
+}

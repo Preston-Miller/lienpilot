@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lien-tracker",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "start"
+      ],
+      "port": 3000
+    },
+    {
+      "name": "lien-tracker-no-email",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "GMAIL_USER=",
+        "GMAIL_APP_PASSWORD=",
+        "PORT=3001",
+        "node",
+        "server.js"
+      ],
+      "port": 3001
+    },
+    {
+      "name": "lien-tracker-3001",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "PORT=3001",
+        "node",
+        "server.js"
+      ],
+      "port": 3001
+    }
+  ]
+}

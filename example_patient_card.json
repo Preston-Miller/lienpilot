@@ -1,0 +1,92 @@
+{
+    "patient": {
+      "patient_name": "Lucy Bailey",
+      "patient_id": "1234567890",
+      "date_of_birth": "1990-01-01",
+      "health_release": true
+    },
+  
+    "case": {
+      "date_of_injury": "2024-11-28",
+      "treatment_status": "completed",
+      "treatment_end_date": "2025-01-07",
+      "case_status": "settlement_pending",
+      "representation_status": "confirmed"
+    },
+  
+    "attorney": {
+      "firm_name": "Grant Law",
+      "attorney_name": "Thomas Grant",
+      "attorney_email": "tgrant@grantlaw.test",
+      "case_manager_name": "Sarah Jones",
+      "case_manager_email": "sjones@grantlaw.test"
+    },
+  
+    "financial": {
+      "total_charges": 11300,
+      "current_balance": 8300,
+      "lien_amount": 8300,
+      "lien_status": "active",
+      "payment_status": "unpaid",
+  
+      "pip": {
+        "applicable": true,
+        "carrier": "State Farm",
+        "claim_number": "ABC123456",
+        "policy_limit": 3000,
+        "amount_paid": 3000,
+        "amount_remaining": 0,
+        "status": "exhausted",
+        "exhaustion_date": "2025-01-03"
+      },
+  
+      "reduction": {
+        "requested": false,
+        "requested_amount": null,
+        "status": null
+      }
+    },
+  
+    "records": {
+      "medical_records_status": "sent",
+      "itemized_bill_status": "sent",
+      "lien_or_lop_status": "sent",
+      "last_records_sent": "2025-01-10"
+    },
+  
+    "timeline": [
+      {
+        "timestamp": "2025-01-03T14:22:00",
+        "type": "pip_exhausted",
+        "summary": "PIP benefits exhausted after $3,000 in payments."
+      },
+      {
+        "timestamp": "2025-01-07T16:30:00",
+        "type": "treatment_completed",
+        "summary": "Patient completed treatment."
+      },
+      {
+        "timestamp": "2025-01-08T09:14:00",
+        "type": "records_requested",
+        "summary": "Grant Law requested final medical records and itemized bill."
+      },
+      {
+        "timestamp": "2025-01-10T11:42:00",
+        "type": "records_sent",
+        "summary": "Final medical records and itemized bill sent to Grant Law."
+      },
+      {
+        "timestamp": "2025-02-15T10:07:00",
+        "type": "attorney_update",
+        "summary": "Grant Law confirmed the case is still pending settlement."
+      }
+    ],
+  
+    "agent": {
+      "waiting_on": "attorney",
+      "next_follow_up": "2025-03-15",
+      "action_needed": "none",
+      "clinic_required": false,
+      "internal_note": "Treatment complete. PIP exhausted. Final records sent. Waiting for settlement."
+    }
+  }

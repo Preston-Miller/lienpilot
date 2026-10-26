@@ -1,0 +1,14 @@
+{
+  "_request": {
+    "endpoint": "GET https://apisandbox.crmbridge.ai/v1/GetTreatmentPlans",
+    "body": {
+      "FromDate": "2020-01-01",
+      "ToDate": "2026-12-31",
+      "Skip": 0,
+      "Take": 25
+    },
+    "http_status": 429,
+    "note": "Per-patient failed; saved Take=25 without PatientId. Last: \"Invalid API Authentication\""
+  },
+  "Message": "This address is temporarily blocked after repeated authentication failures. Try again after 2026-10-08 01:12 UTC, or contact support@crmbridge.ai."
+}

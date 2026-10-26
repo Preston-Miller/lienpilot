@@ -1,0 +1,4 @@
+Patient Name,Clinic Name,Attorney Name,Attorney Email,Firm Name,Date of Service,Lien Amount,Status,Action Needed,Last Contact Date,Notes
+Test Patient One,Wasatch Injury Chiropractic,Alex Rivera,pmille10@byu.edu,Rivera Law,3/14/2026,"$8,400",Case Ongoing,None,8/1/2026,Imported from sample CSV.
+Test Patient Two,Wasatch Injury Chiropractic,Sam Chen,pmille10@byu.edu,Chen PI Attorneys,4/2/2026,"$12,750",Case Ongoing,None,7/20/2026,Imported from sample CSV.
+Test Patient Three,Wasatch Injury Chiropractic,Jordan Blake,pmille10@byu.edu,Blake & Partners,5/9/2026,"$5,200",Case Ongoing,None,8/10/2026,Imported from sample CSV.

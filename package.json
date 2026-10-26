@@ -1,0 +1,19 @@
+{
+  "name": "lienpilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LienPilot MVP: track outstanding medical liens, chase attorneys, and let Claude triage their replies.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "imapflow": "^2.0.6",
+    "mailparser": "^3.9.28",
+    "nodemailer": "^10.0.10"
+  }
+}

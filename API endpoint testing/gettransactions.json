@@ -1,0 +1,15 @@
+{
+  "_request": {
+    "endpoint": "GET https://apisandbox.crmbridge.ai/v1/GetTransactions",
+    "body": {
+      "PatientId": "17210",
+      "FromDate": "2020-01-01",
+      "ToDate": "2026-12-31",
+      "Skip": 0,
+      "Take": 1000
+    },
+    "http_status": 400,
+    "note": "Billing line items. Best: Emily Johnson"
+  },
+  "Message": "Invalid API Authentication"
+}

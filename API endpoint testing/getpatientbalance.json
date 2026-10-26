@@ -1,0 +1,37 @@
+{
+  "_request": {
+    "endpoint": "POST https://apisandbox.crmbridge.ai/v1/live/GetPatientBalance",
+    "body": {
+      "patients": [
+        "17210",
+        "17271",
+        "17303",
+        "17194"
+      ]
+    },
+    "http_status": 200,
+    "note": "Live AR for focus patients with known data."
+  },
+  "Data": [
+    {
+      "PatientId": "17210",
+      "name": "Emily Johnson",
+      "error": "CRMBridge POST /v1/live/GetPatientBalance → 400: Invalid API Authentication"
+    },
+    {
+      "PatientId": "17271",
+      "name": "Anki Winget",
+      "error": "CRMBridge POST /v1/live/GetPatientBalance → 400: Invalid API Authentication"
+    },
+    {
+      "PatientId": "17303",
+      "name": "Anky Winget",
+      "error": "CRMBridge POST /v1/live/GetPatientBalance → 400: Invalid API Authentication"
+    },
+    {
+      "PatientId": "17194",
+      "name": "Michael Brown",
+      "error": "CRMBridge POST /v1/live/GetPatientBalance → 400: Invalid API Authentication"
+    }
+  ]
+}

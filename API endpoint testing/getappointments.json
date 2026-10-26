@@ -1,0 +1,16 @@
+{
+  "_request": {
+    "endpoint": "GET https://apisandbox.crmbridge.ai/v1/GetAppointments",
+    "body": {
+      "PatientId": "17210",
+      "CRMPracticeId": "1",
+      "FromDate": "2020-01-01",
+      "ToDate": "2026-12-31",
+      "Skip": 0,
+      "Take": 1000
+    },
+    "http_status": 400,
+    "note": "Helpful for appointment_history skill. Best: Emily Johnson"
+  },
+  "Message": "Invalid API Authentication"
+}

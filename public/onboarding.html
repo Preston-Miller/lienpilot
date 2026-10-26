@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LienPilot Setup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 5h18" /><path d="M3 11h11" /><path d="M3 17h7" />
+          <path d="M15 15.5l2.2 2.2L22 13" />
+        </svg>
+      </span>
+      <div class="brand-text">
+        <h1>LienPilot</h1>
+        <span class="brand-tag">Clinic setup</span>
+      </div>
+    </div>
+    <div class="clock">
+      <a href="/" class="btn ghost">Back to liens</a>
+    </div>
+  </header>
+
+  <main class="onboard-main">
+    <ol class="onboard-steps" aria-label="Setup steps">
+      <li id="step-pill-1" class="active"><span>1</span> Who handles what</li>
+      <li id="step-pill-2"><span>2</span> Upload liens</li>
+    </ol>
+
+    <section id="step-1" class="panel onboard-panel">
+      <h2>Who should LienPilot loop in?</h2>
+      <p class="hint">When an attorney needs something from the clinic, LienPilot emails the person who handles it and CCs the attorney. The same address can cover more than one role.</p>
+
+      <form id="contacts-form" novalidate>
+        <div id="role-fields" class="role-fields"></div>
+
+        <fieldset class="role-field">
+          <legend>Staff who can ask about a patient</legend>
+          <p class="hint">These people (and everyone above) can email <strong id="agent-address">LienPilot's address</strong> a question like "What's going on with Lucas Reed's lien?" and get an answer back. Anyone else gets no reply.</p>
+          <div class="role-inputs role-inputs-single">
+            <label>
+              <span>Emails <em>(one per line or comma-separated; optional)</em></span>
+              <textarea id="staff-emails" rows="3" placeholder="frontdesk@yourclinic.com&#10;billing@yourclinic.com" autocomplete="off"></textarea>
+            </label>
+          </div>
+        </fieldset>
+        <p id="contacts-error" class="onboard-error hidden" role="alert"></p>
+        <div class="onboard-actions">
+          <button type="submit" class="btn primary" id="save-contacts">Save and continue</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="step-2" class="panel onboard-panel hidden">
+      <h2>Upload your liens</h2>
+      <p class="hint">A CSV with a header row. Required columns: <code>patient_name</code>, <code>clinic_name</code>, <code>attorney_name</code>, <code>attorney_email</code>. Optional: <code>firm_name</code>, <code>date_of_service</code>, <code>lien_amount</code>, <code>status</code>, <code>last_contact_date</code>, <code>notes</code>. This file replaces every lien currently in LienPilot, along with their history.</p>
+
+      <label id="drop-zone" class="drop-zone" for="onboard-csv">
+        <input type="file" id="onboard-csv" accept=".csv,text/csv" />
+        <strong>Choose a CSV file</strong>
+        <span class="hint">or drop it here</span>
+      </label>
+      <div id="csv-result" class="csv-result hidden" role="status"></div>
+
+      <div class="onboard-actions">
+        <button type="button" class="btn ghost" id="back-to-contacts">Back</button>
+        <a href="/" class="btn primary" id="finish">Go to liens</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LienPilot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 5h18" /><path d="M3 11h11" /><path d="M3 17h7" />
+          <path d="M15 15.5l2.2 2.2L22 13" />
+        </svg>
+      </span>
+      <div class="brand-text">
+        <h1>LienPilot</h1>
+        <span class="brand-tag">Email agent for medical liens</span>
+      </div>
+    </div>
+    <div class="clock">
+      <span id="live-status" class="live-pill" title="Live email status">Live email: —</span>
+      <span id="clock-label">Today: —</span>
+      <span class="demo-controls">
+        <a href="/dashboard.html" class="btn ghost" title="Cases, outstanding liens, and actions needed">Clinic dashboard</a>
+        <a href="/onboarding.html" class="btn ghost" title="Clinic contacts and lien upload">Clinic setup</a>
+        <button id="reset-simulation" class="btn ghost" title="Keep the liens; clear their status, action, activity and contact dates, and zero the clock">Restart simulation</button>
+        <button id="advance-clock" class="btn ghost" title="Fast-forward the simulated clock">+15 days</button>
+        <button id="present-mode" class="btn ghost" title="Step through one follow-up">Present</button>
+        <button id="run-followups" class="btn ghost spinner-btn" title="Demo: canned attorney replies, nothing is sent">
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span class="btn-label">Simulate follow-ups</span>
+        </button>
+        <button id="send-followups" class="btn primary spinner-btn" title="Email real status requests to overdue liens">
+          <span class="btn-spinner" aria-hidden="true"></span>
+          <span class="btn-label">Send follow-ups</span>
+        </button>
+      </span>
+    </div>
+  </header>
+
+  <div id="present-bar" class="present-bar hidden">
+    <span id="present-step-label" class="present-step-label">Step 1 of 9</span>
+    <div class="present-bar-actions">
+      <button id="present-back" class="btn ghost">Back</button>
+      <button id="present-next" class="btn primary">Next</button>
+      <button id="present-exit" class="btn ghost">Exit</button>
+    </div>
+  </div>
+
+  <main class="agent-main">
+    <section class="panel liens-panel">
+      <div class="panel-heading">
+        <div class="panel-heading-row">
+          <h2>Current liens <span id="lien-count" class="count"></span></h2>
+          <div class="import-controls">
+            <input type="file" id="csv-file" accept=".csv,text/csv" hidden />
+            <button id="import-csv" class="btn ghost" title="Add liens from a spreadsheet (CSV with a header row)">Import CSV</button>
+          </div>
+        </div>
+        <p class="hint panel-hint">LienPilot emails every open lien that's gone quiet, triages each reply with Claude, CCs the clinic when they must act, and tracks the clinic's follow-through.</p>
+        <div id="import-result" class="import-result hidden"></div>
+      </div>
+      <div class="liens-table-wrap">
+        <table id="liens">
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Clinic</th>
+              <th>Firm</th>
+              <th class="num">Amount</th>
+              <th class="num">Days since contact</th>
+              <th>Status</th>
+              <th>Action needed</th>
+              <th>Activity</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="liens-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="activity-panel" class="panel activity-panel">
+      <div class="panel-heading-row">
+        <h2>Live log</h2>
+        <span id="send-summary" class="hint"></span>
+      </div>
+      <ul id="activity-list" class="activity-list"></ul>
+    </section>
+
+    <section id="run-report" class="panel hidden">
+      <h2>Follow-up run <span id="run-count" class="count"></span></h2>
+      <div id="run-results" class="run-results"></div>
+    </section>
+
+    <section id="present-stage" class="panel hidden">
+      <div id="present-stage-body"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

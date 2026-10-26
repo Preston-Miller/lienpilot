@@ -1,0 +1,50 @@
+{
+  "contacts": [
+    {
+      "id": "payments",
+      "name": "Payments Desk",
+      "email": "prestondeemiller@gmail.com",
+      "handles": [
+        "Payment Issue"
+      ]
+    },
+    {
+      "id": "records",
+      "name": "Records Desk",
+      "email": "prestondeemiller@gmail.com",
+      "handles": [
+        "Medical Records",
+        "Other Documents",
+        "Correction Needed"
+      ]
+    },
+    {
+      "id": "bills",
+      "name": "Itemized Bills Desk",
+      "email": "prestondeemiller@gmail.com",
+      "handles": [
+        "Itemized Bill"
+      ]
+    },
+    {
+      "id": "treatment",
+      "name": "Treatment Status Desk",
+      "email": "prestondeemiller@gmail.com",
+      "handles": [
+        "Treatment Status"
+      ]
+    },
+    {
+      "id": "reductions",
+      "name": "Reductions Desk",
+      "email": "prestondeemiller@gmail.com",
+      "handles": [
+        "Reduction / Payoff Decision",
+        "Balance Question",
+        "Case / Contact Issue"
+      ],
+      "default": true
+    }
+  ],
+  "staff": []
+}

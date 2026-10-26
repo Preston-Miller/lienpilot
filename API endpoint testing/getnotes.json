@@ -1,0 +1,14 @@
+{
+  "_request": {
+    "endpoint": "GET https://apisandbox.crmbridge.ai/v1/GetNotes",
+    "body": {
+      "PatientId": "17210",
+      "CRMPracticeId": "1",
+      "Skip": 0,
+      "Take": 1000
+    },
+    "http_status": 400,
+    "note": "Clinical/treatment context. Best: Emily Johnson"
+  },
+  "Message": "Invalid API Authentication"
+}
